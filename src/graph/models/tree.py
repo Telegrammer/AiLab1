@@ -49,12 +49,14 @@ class TreeModel:
                 return True
         return False
 
-    def remove_edge(self, start_node: str, end_node: str):
+    def remove_edge(self, start_node: str, end_node: str) -> list[str]:
         if start_node not in self.__nodes or end_node not in self.__nodes:
             raise ValueError("Одной из вершин не существует")
 
         if end_node not in self.__nodes_info[start_node].children:
             raise ValueError("Вершины не связаны")
+
+        deleted_nodes = []
 
         self.__nodes_info[start_node].remove(end_node)
 
@@ -63,9 +65,13 @@ class TreeModel:
 
         if not self.have_parents(start_node) and not self.have_children(start_node):
             self.__nodes.remove(start_node)
+            deleted_nodes.append(start_node)
 
         if not self.have_parents(end_node) and end_node not in self.__nodes_info.keys():
             self.__nodes.remove(end_node)
+            deleted_nodes.append(end_node)
+
+        return deleted_nodes
 
 
 

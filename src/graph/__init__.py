@@ -6,5 +6,5 @@ __all__ = (
 
 
 
-from .graph_research_window import GraphResearchPresenter
+from graph.presenters.graph_research_window import GraphResearchPresenter
 from .models import TreeModel

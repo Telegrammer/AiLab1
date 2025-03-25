@@ -125,15 +125,15 @@ class TreeResearchView(object):
         self.endVertexLabel_3.setMinimumSize(QtCore.QSize(125, 0))
         self.endVertexLabel_3.setObjectName("endVertexLabel_3")
         self.horizontalLayout_5.addWidget(self.endVertexLabel_3)
-        self.startVertexInput_3 = QtWidgets.QComboBox(self.algorithmEditWidget)
-        self.startVertexInput_3.setStyleSheet("\n"
+        self.startVertexInput = QtWidgets.QComboBox(self.algorithmEditWidget)
+        self.startVertexInput.setStyleSheet("\n"
 "\n"
 "\n"
 "QComboBox {background: white;\n"
 "border: solid 1px;\n"
 "}")
-        self.startVertexInput_3.setObjectName("startVertexInput_3")
-        self.horizontalLayout_5.addWidget(self.startVertexInput_3)
+        self.startVertexInput.setObjectName("startVertexInput_3")
+        self.horizontalLayout_5.addWidget(self.startVertexInput)
         self.verticalLayout_5.addLayout(self.horizontalLayout_5)
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
@@ -141,25 +141,25 @@ class TreeResearchView(object):
         self.startVertexLabel_3.setMinimumSize(QtCore.QSize(125, 0))
         self.startVertexLabel_3.setObjectName("startVertexLabel_3")
         self.horizontalLayout_6.addWidget(self.startVertexLabel_3)
-        self.endVertexInput_3 = QtWidgets.QComboBox(self.algorithmEditWidget)
-        self.endVertexInput_3.setStyleSheet("\n"
+        self.endVertexInput = QtWidgets.QComboBox(self.algorithmEditWidget)
+        self.endVertexInput.setStyleSheet("\n"
 "\n"
 "\n"
 "QComboBox {background: white;\n"
 "border: solid 1px;\n"
 "}")
-        self.endVertexInput_3.setObjectName("endVertexInput_3")
-        self.horizontalLayout_6.addWidget(self.endVertexInput_3)
+        self.endVertexInput.setObjectName("endVertexInput_3")
+        self.horizontalLayout_6.addWidget(self.endVertexInput)
         self.verticalLayout_5.addLayout(self.horizontalLayout_6)
         self.verticalLayout_4 = QtWidgets.QVBoxLayout()
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.algorithmLabel_3 = QtWidgets.QLabel(self.algorithmEditWidget)
         self.algorithmLabel_3.setObjectName("algorithmLabel_3")
         self.verticalLayout_4.addWidget(self.algorithmLabel_3)
-        self.graphAlgorithmComboBox_3 = QtWidgets.QComboBox(self.algorithmEditWidget)
-        self.graphAlgorithmComboBox_3.setEditable(False)
-        self.graphAlgorithmComboBox_3.setObjectName("graphAlgorithmComboBox_3")
-        self.verticalLayout_4.addWidget(self.graphAlgorithmComboBox_3)
+        self.graphAlgorithmComboBox = QtWidgets.QComboBox(self.algorithmEditWidget)
+        self.graphAlgorithmComboBox.setEditable(False)
+        self.graphAlgorithmComboBox.setObjectName("graphAlgorithmComboBox")
+        self.verticalLayout_4.addWidget(self.graphAlgorithmComboBox)
         self.verticalLayout_5.addLayout(self.verticalLayout_4)
         spacerItem1 = QtWidgets.QSpacerItem(20, 42, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_5.addItem(spacerItem1)
@@ -174,6 +174,8 @@ class TreeResearchView(object):
         self.verticalLayout_5.addWidget(self.stepsCountLabel)
         self.editLayout.addWidget(self.algorithmEditWidget)
         self.horizontalLayout_13.addLayout(self.editLayout)
+        self.graphAlgorithmComboBox.addItem("В ширину")
+        self.graphAlgorithmComboBox.addItem("В глубину")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
