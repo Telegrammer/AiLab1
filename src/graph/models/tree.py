@@ -78,7 +78,6 @@ class TreeModel:
     def have_edge(self, start_node: str, end_node: str) -> bool:
         if start_node not in self.__nodes_info.keys():
             return False
-
         return end_node in self.__nodes_info[start_node].children
 
 
@@ -86,10 +85,12 @@ class TreeModel:
         return self.__nodes
 
     def get_node_info(self, node: str) -> list[str]:
+        if node not in self.__nodes_info:
+            return []
         return self.__nodes_info[node].children
 
     def have_children(self, node: str):
-        return node in self.__nodes_info.keys()
+        return node in self.__nodes_info
 
 
     def __str__(self):

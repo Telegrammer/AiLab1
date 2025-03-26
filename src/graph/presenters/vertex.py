@@ -14,7 +14,7 @@ class Vertex(QWidget):
                  value: str,
                  position: QPoint,
                  size: int = 30,
-                 joint_count: int = 4):
+                 joint_count: int = 12):
 
         QWidget.__init__(self, parent)
         self.__value: str = value

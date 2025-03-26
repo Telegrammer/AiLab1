@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class TreeResearchView(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(900, 700)
+        Form.resize(900, 600)
         Form.setStyleSheet("background-color: rgba(142, 250, 255, 30);")
         self.horizontalLayout_13 = QtWidgets.QHBoxLayout(Form)
         self.horizontalLayout_13.setObjectName("horizontalLayout_13")
